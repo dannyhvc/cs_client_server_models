@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Lookup</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <!--navbar content area-->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand mx-3" href="/home.html">Help Desk</a>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="colapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-3">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/modalexample.html">Employee</a>
+                </li>
+
+            </ul>
+        </div>
+    </nav>
+
+    <!--main content area-->
+    <div class="container">
+        <div class="row pt-5">
+            <div class="col-4 mx-auto text-center">
+                <img src="img/helpdesk.svg">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 mx-auto pt-4 text-center">
+                <h2>Employees</h2>
+                <h4>v1.0</h4>
+                <button type="button" class="btn btn-outline-secondary m-2" data-bs-toggle="modal" data-bs-target="#myModal">
+                    Lookup Employee
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!--modal definition-->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--modal main content area-->
+                    <div class="mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header p-0 ml-1 text-center">
+                                Employee Information
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Title:</div>
+                                    <div class="col-2 text-left" id="title"></div>
+                                    <div class="col-3 text-right" style="font-weight:bold;">First:</div>
+                                    <div class="col-4 text-left" id="firstname"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Last:</div>
+                                    <div class="col-8 text-left" id="lastname"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Phone:</div>
+                                    <div class="col-8 text-left" id="phone"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Email:</div>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="enter email" id="textboxEmail" class="form-control my-2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <input type="button" value="Find employees" id="getButton" />
+                                <div id="status" class="text-left mt-3 mb-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer"
+            style="position:absolute;
+                    bottom:0;
+                    width:100%;
+                    height:5%;
+                    border-top: black 1px solid;">
+        <span class="text-muted pl-2">&emsp; &copy; 2021 - Info3070</span>
+    </footer>
+
+    <script src="lib/js/jquery.min.js" defer></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/employeelookup.js" defer></script>
+</body>
+</html>

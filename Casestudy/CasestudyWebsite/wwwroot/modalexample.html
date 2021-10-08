@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Modal Example</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <!--main content area-->
+    <div class="mx-4 my-4">
+        <div class="card">
+            <div class="card-header text-center">
+                Main Content Panel
+            </div>
+            <div class="card-body">
+                <div class="text-left col-xs-6" id="title"> Some interesting main content goes here</div>
+                <button type="button" class="btn btn-outline-secondary m-2" data-bs-toggle="modal" data-bs-target="#myModal">
+                    show modal
+                </button>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    <!--modal definition area-->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Sample Modal</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Normally we have some usefull content here.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-outline-primary">Do Something</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="lib/js/bootstrap.min.js"></script>
+</body>
+</html>

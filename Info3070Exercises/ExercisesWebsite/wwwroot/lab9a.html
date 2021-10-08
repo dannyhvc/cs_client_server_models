@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Lookup</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!--navigation-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+      <a class="navbar-brand mx-3" href="#">Info3070Exercises</a>
+      <button
+        class="navbar-toggler mx-3"
+        type="button"
+        data-bs-toggler="collapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse">
+        <ul>
+          <li class="nav-item">
+            <a href="/studentlookup.html" class="nav-link">Original Lookup</a>
+          </li>
+          <li class="nav-item">
+            <a href="/modalexample.html" class="nav-link">Modal</a>
+          </li>
+          <li class="nav-item">
+            <a href="/lab7a.html" class="nav-link">Lab7a</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="/lab9a.html#theModal"
+              class="nav-link"
+              data-bs-toggler="modal"
+              data-bs-target="#myModal"
+              >Lab9a</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- main content -->
+    <div
+      class="card col-10 col-sm-4 text-center mt-5"
+      style="margin: 0 auto; float: none"
+    >
+      <div class="card-heading text-center">Update Student</div>
+      <div class="card-body">
+        <input
+          type="text"
+          name=""
+          id=""
+          class="form-control"
+          placeholder="enter last name"
+        />
+        <input type="button" value="Find" class="mt-2" id="getbutton" />
+      </div>
+    </div>
+
+    <!-- modal definition -->
+    <div
+      class="modal fade"
+      id="myModal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      index="-1"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="myModalLabel">Lab 9a</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="mx-4 my-4">
+              <div class="card">
+                <div class="card-header text-center">Student information</div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-4">Title</div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        id="TextBoxTitle"
+                        placeholder="enter title"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">First:</div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        id="TextBoxFirstname"
+                        placeholder="enter first name"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">Surname:</div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        id="TextBoxLastname"
+                        placeholder="enter last name"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">Phone#:</div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        id="TextBoxPhone"
+                        placeholder="enter phone#"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-4">Email:</div>
+                    <div class="col-8">
+                      <input
+                        type="text"
+                        id="TextBoxEmail"
+                        placeholder="enter email address"
+                        class="form-control"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer text-center">
+                <input type="button" value="Update" id="updatebutton">
+                <div id="status" class="text-left mt-3 mb-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<button submi></button>
+    <script src="lib/js/jquery.min.js" defer></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/lab9a.js" defer></script>
+  </body>
+</html>

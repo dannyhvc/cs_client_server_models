@@ -1,0 +1,46 @@
+﻿<!--EXAMPLE #####6-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JQuery Ex#6</title>
+    <meta charset="utf-8" />
+    <link href="../lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" data="data;base64,iVBORw0KGo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <div class="container text-center">
+        <h2> Excersize #6</h2>
+        <div class="list-group" id="studentList">
+        </div>
+        <button id="loadbutton" class="btn btn-outline-secondary mt-4">Load</button>
+        <div id="inputstuff" class="mt-3 p-4" style="display:none; width:50vw;">
+
+            <span class="row">
+                <input id="txt_fname" type="text" placeholder="enter first name" />
+            </span>
+
+            <span class="row">
+                <input id="txt_lname" type="text" placeholder="enter last name" />
+            </span>
+
+            <span class="row">
+                <button id="addbutton" class="btn btn-outline-success mt-2" style="display:none;">Add</button>
+                <button id="removebutton" class="btn btn-outline-danger mt-2" style="display:none;">Remove</button>
+            </span>
+        </div>
+    </div>
+
+    <div class="text-center text-center" style="position: fixed; bottom:10vh; width:100%; font-size:small;"
+        id="results">
+    </div>
+
+    <script src="../lib/js/jquery.min.js" defer></script>
+    <script src="../lib/js/bootstrap.min.js" defer></script>
+    <script src="../js/jqueryex6.js" defer></script>
+</body>
+
+</html>

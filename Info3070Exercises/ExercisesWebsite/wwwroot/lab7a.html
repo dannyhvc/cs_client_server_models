@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab7a</title>
+    <meta charset="utf-8" />
+    <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="icon" href="data;base64,iVBORw0KGgo=" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <!-- menue example area -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand mx-3" href="/menuexample.html">Info3070Exercises</a>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="colapse" data-bs-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mx-3">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/studentlookup.html">Lookup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/modalexample.html">Modal</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/lab7a.html">Lab7a</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- main content area prior to modal -->
+    <div class="mx-4 my-4">
+        <div class="card">
+            <div class="card-header text-center">
+                Main Content Panel
+            </div>
+            <div class="card-body">
+                <div class="text-left col-xs-6" id="card_title"> Some interesting main content goes here</div>
+                <button type="button" class="btn btn-outline-secondary m-2" data-bs-toggle="modal" data-bs-target="#myModal">
+                    show modal
+                </button>
+            </div>
+            <div class="card-footer"></div>
+        </div>
+    </div>
+    <!--modal definition area-->
+    <div class="modal fade" id="myModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title" id="staticBackdropLabel">Sample Modal</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!--student lookup area-->
+                    <div class="mx-2 my-2">
+                        <div class="card">
+                            <div class="card-header p-0 ml-1">
+                                Student Information
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Title:</div>
+                                    <div class="col-2 text-left" id="title"></div>
+                                    <div class="col-3 text-right" style="font-weight:bold;">First:</div>
+                                    <div class="col-4 text-left" id="firstname"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Email:</div>
+                                    <div class="col-8 text-left" id="email"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Phone:</div>
+                                    <div class="col-8 text-left" id="phone"></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-3" style="font-weight:bold;">Last:</div>
+                                    <div class="col-8">
+                                        <input type="text" placeholder="enter last name" id="textboxLastname" class="form-control my-2" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <input type="button" value="Find Student" id="getButton" />
+                                <div id="status" class="text-left mt-3 mb-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-outline-primary">Do Something</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--import scripts for use-->
+    <script src="lib/js/jquery.min.js" defer></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/studentlookup.js" defer></script>
+</body>
+</html>
