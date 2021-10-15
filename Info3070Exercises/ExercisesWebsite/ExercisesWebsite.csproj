@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\bsstyleexample.html" />
     <None Include="wwwroot\lab9a.html" />
     <None Include="wwwroot\studentlookup.html" />
   </ItemGroup>
