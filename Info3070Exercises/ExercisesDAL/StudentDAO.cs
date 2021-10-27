@@ -13,12 +13,7 @@ namespace ExercisesDAL
 
         private void CLS_DBG(Exception ex) =>
             Debug.WriteLine(
-                "Problem in " +
-                GetType().Name +
-                ' ' +
-                MethodBase.GetCurrentMethod().Name +
-                ' ' +
-                ex.Message
+                $"Problem in {GetType().Name} {MethodBase.GetCurrentMethod().Name} {ex.Message}"
             );
 
         public async Task<Student> GetByLastname(string name)

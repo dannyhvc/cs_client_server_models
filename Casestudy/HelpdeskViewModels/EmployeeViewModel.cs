@@ -10,14 +10,14 @@ namespace HelpdeskViewModels
     public class EmployeeViewModel
     {
         private readonly EmployeeDAO _dao;
-        public int Id { get; set; }        
+        public int Id { get; set; }
         public string Title { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
         public string Phoneno { get; set; }
         public string Email { get; set; }
         public int DepartmentId { get; set; }
-        public string DepartmentName {  get; set; }
+        public string DepartmentName { get; set; }
         public bool IsTech { get; set; }
         public string StaffPicture64 { get; set; }
         public string Timer { get; set; }
@@ -94,7 +94,7 @@ namespace HelpdeskViewModels
                 var Employees = await _dao.GetAll();
                 foreach (Employee Employee in Employees)
                 {
-                    EmployeeViewModel svm = new()
+                    EmployeeViewModel evm = new()
                     {
                         Title = Employee.Title,
                         Firstname = Employee.FirstName,
@@ -105,7 +105,7 @@ namespace HelpdeskViewModels
                         DepartmentId = Employee.DepartmentId,
                         Timer = Convert.ToBase64String(Employee.Timer),
                     };
-                    all_vm.Add(svm);
+                    all_vm.Add(evm);
                 }
             }
             catch (Exception ex)
@@ -139,9 +139,9 @@ namespace HelpdeskViewModels
             }
         }
 
-        public async Task<UpdateStatus> Update()
+        public async Task<int> Update()
         {
-            UpdateStatus status = UpdateStatus.Failed;
+            UpdateStatus status;
             try
             {
                 Employee stu = new()
@@ -164,7 +164,7 @@ namespace HelpdeskViewModels
                 CLS_DBG(ex);
                 throw;
             }
-            return status;
+            return Convert.ToInt16(status);
         }
 
         public async Task<int> Delete()

@@ -90,7 +90,7 @@ namespace CasestudyTests
         [Fact]
         public async Task Student_UpdateTest()
         {
-            UpdateStatus status;
+            int status;
             try
             {
                 EmployeeViewModel vm = new() { Email = "dh@abc.com" };
@@ -103,7 +103,7 @@ namespace CasestudyTests
                 Debug.WriteLine("Error " + ex.Message);
                 throw;
             }
-            Assert.NotEqual(UpdateStatus.Ok, status);
+            Assert.NotEqual(-1, status);
         }
 
         [Fact]

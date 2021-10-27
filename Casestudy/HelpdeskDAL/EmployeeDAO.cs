@@ -14,9 +14,7 @@ namespace HelpdeskDAL
 
         private void CLS_DBG(Exception ex) =>
             Debug.WriteLine(
-                "Problem in " + GetType().Name + ' ' +
-                MethodBase.GetCurrentMethod().Name + ' ' + ex.Message
-            );
+                "Problem in " + GetType().Name + ' ' + MethodBase.GetCurrentMethod().Name + ' ' + ex.Message);
 
         public async Task<Employee> GetByEmail(string email)
         {
@@ -82,7 +80,7 @@ namespace HelpdeskDAL
 
         public async Task<UpdateStatus> Update(Employee employee)
         {
-            UpdateStatus status = UpdateStatus.Failed;
+            UpdateStatus status;
             try
             {
                 status = await repo.Update(employee);

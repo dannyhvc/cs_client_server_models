@@ -1,41 +1,47 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Employee Lookup</title>
+    <title>Student List</title>
     <meta charset="utf-8" />
     <link href="lib/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="icon" href="data;base64,iVBORw0KGgo=" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-    <!--navbar content area-->
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <a class="navbar-brand mx-3" href="/home.html">Help Desk</a>
-        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="colapse" data-bs-target="#navbarContent">
+    <!--navigation-->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <a class="navbar-brand mx-3" href="#">Info3070Exercises</a>
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggler="collapse" data-bs-target="#navbarContent">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav mx-3">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/home.html">Home</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a href="/studentlookup.html" class="nav-link">Original Lookup</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Employee</a>
+                    <a href="/modalexample.html" class="nav-link">Modal</a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="/lab7a.html" class="nav-link">Lab7a</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/lab9a.html" class="nav-link">Lab9a</a>
+                </li>
+                <li class="nav-item">
+                    <a href="studentlist.html" class="nav-link">Students</a>
+                </li>
+                <li class="nav-item">
+                    <a href="studentaddupdate.html" class="nav-link active">Student Add</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <!--main contents of the page-->
     <div class="justify-content-center align-items-center row mt-5 ml-1">
-        <div class="row pt-5">
-            <div class="col-4 mx-auto text-center">
-                <img src="img/helpdesk.svg" width="100" height="100">
-            </div>
-        </div>
-        <div class="col-12 text-center p-3"><h2>Current Employees</h2></div>
-        <div class="list-group col-10" id="employeeList" style="height:45vh;">
+        <div class="col-12 text-center p-3"><h2>Current Students</h2></div>
+        <div class="list-group col-10" id="studentList" style="height:45vh;">
             <!--gets filled dynamically-->
         </div>
     </div>
@@ -52,7 +58,7 @@
                     <div class="mx-4 my-4">
                         <div class="card">
                             <div class="card-header text-center">
-                                Employee information
+                                Student information
                             </div>
                             <div class="card-body">
                                 <div class="row">
@@ -75,16 +81,11 @@
                                     <div class="col-4">Email:</div>
                                     <div class="col-8"><input type="text" id="TextBoxEmail" placeholder="enter email address" class="form-control" /></div>
                                 </div>
-                                <div class="row">
-                                    <div class="col-4">Departments:</div>
-                                    <div class="col-8"><select id="ddlDepartments" name="ddlDepartments" class="form-control" /></div>
-                                </div>                           
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-center">
-                        <input type="button" class="btn btn-outline-primary btn-md" value="update" id="actionbutton">
-                        <input type="button" class="btn btn-outline-danger btn-md" value="delete" id="deletebutton" name="deletebutton" />
+                        <input type="button" class="btn btn-secondary" value="update" id="actionbutton">
                         <div id="modalstatus" class="text-left mt-3 mb-2"></div>
                     </div>
                 </div>
@@ -92,8 +93,9 @@
         </div>
     </div>
 
-    <script src="lib/js/jquery.min.js" defer></script>
-    <script src="lib/js/bootstrap.min.js" defer></script>
-    <script src="js/employee.js" defer></script>
+    <script src="lib/js/jquery.min.js"></script>
+    <script src="lib/js/bootstrap.min.js"></script>
+    <script src="js/studentaddupdate.js"></script>
+
 </body>
 </html>
